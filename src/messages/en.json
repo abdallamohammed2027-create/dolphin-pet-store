@@ -1,0 +1,181 @@
+{
+  "meta": {
+    "siteName": "Dolphin Pet Supplies",
+    "tagline": "Everything your four-legged friend needs",
+    "homeTitle": "Dolphin | Pet Supplies Store",
+    "homeDescription": "Dolphin Pet Supplies — food, accessories, toys and grooming products for all pets at the best prices and quality in Egypt.",
+    "aboutTitle": "About Us | Dolphin",
+    "aboutDescription": "Learn about Dolphin's story and our values in pet care.",
+    "productsTitle": "Our Products | Dolphin",
+    "productsDescription": "Browse our full range of pet food, accessories and supplies.",
+    "contactTitle": "Contact Us | Dolphin",
+    "contactDescription": "Get in touch with the Dolphin team for any inquiry or special request."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "callUs": "Call Us"
+  },
+  "hero": {
+    "eyebrow": "Dolphin Pet Supplies",
+    "title": "Everything",
+    "titleHighlight": "your best friend",
+    "titleEnd": "needs, in one place",
+    "subtitle": "Fresh food, toys, accessories and grooming essentials picked with love for every kind of pet — from cats and dogs to birds and fish.",
+    "ctaPrimary": "Browse Products",
+    "ctaSecondary": "Chat on WhatsApp",
+    "stat1Value": "500+",
+    "stat1Label": "Products",
+    "stat2Value": "2000+",
+    "stat2Label": "Happy customers",
+    "stat3Value": "100%",
+    "stat3Label": "Quality guaranteed"
+  },
+  "categories": {
+    "title": "Shop by Category",
+    "subtitle": "Everything your pet needs, organized for easy browsing",
+    "dogs": "Dogs",
+    "dogsDesc": "Food, bedding, toys & supplies",
+    "cats": "Cats",
+    "catsDesc": "Food, litter boxes & accessories",
+    "birds": "Birds",
+    "birdsDesc": "Cages, seeds & care tools",
+    "accessories": "Accessories",
+    "accessoriesDesc": "Collars, leashes & toys",
+    "grooming": "Grooming & Care",
+    "groomingDesc": "Shampoos, brushes & care products",
+    "aquarium": "Aquarium",
+    "aquariumDesc": "Tanks, filters & lighting"
+  },
+  "featured": {
+    "title": "Featured Products",
+    "subtitle": "Our customers' favorites this week",
+    "viewAll": "View All Products",
+    "addToCart": "Add to Cart",
+    "new": "New",
+    "sale": "Sale",
+    "egp": "EGP"
+  },
+  "about": {
+    "eyebrow": "Our Story",
+    "title": "Our passion is animals, our mission is their comfort",
+    "p1": "Dolphin started as a small project born from real love for pets, and has grown into one of the leading specialty stores offering everything your four-legged friend needs — from fresh food to grooming tools and accessories.",
+    "p2": "We carefully select every product and work with trusted suppliers to ensure quality and safety. Our team is made up of animal lovers who understand the needs of every species and breed.",
+    "valuesTitle": "What Sets Us Apart",
+    "value1Title": "Trusted Quality",
+    "value1Desc": "Every product is carefully checked before it reaches your pet.",
+    "value2Title": "Wide Range",
+    "value2Desc": "From cats and dogs to birds and fish, we cover every need.",
+    "value3Title": "Expert Advice",
+    "value3Desc": "Our team helps you choose what's best for your pet and your budget.",
+    "value4Title": "Fast Delivery",
+    "value4Desc": "We deliver quickly with careful, secure packaging."
+  },
+  "products": {
+    "title": "Our Full Range",
+    "subtitle": "Browse by category, or use search to quickly find what you need",
+    "searchPlaceholder": "Search for a product...",
+    "all": "All",
+    "noResults": "No matching products found, try a different search.",
+    "outOfStock": "Out of stock",
+    "inStock": "In stock"
+  },
+  "testimonials": {
+    "title": "What Our Customers Say",
+    "subtitle": "The trust of thousands of customers is our badge of honor",
+    "t1Name": "Sara Ahmed",
+    "t1Role": "Owner of cat \"Lulu\"",
+    "t1Text": "Such a great experience, genuine products and the cat food I buy is always in stock at great prices. Delivery is excellent every time.",
+    "t2Name": "Mahmoud Abdullah",
+    "t2Role": "Dog breeder",
+    "t2Text": "Best place I've found for large-breed dog food variety. The team responds quickly to any question and helps you pick the right product.",
+    "t3Name": "Nora Hassan",
+    "t3Role": "Returning customer",
+    "t3Text": "I've ordered from Dolphin multiple times — consistent quality and very fast delivery. They truly understand what your pet needs.",
+    "t4Name": "Ahmed Kamal",
+    "t4Role": "Bird owner",
+    "t4Text": "Their range of cages and bird supplies is excellent and hard to find elsewhere. Thank you Dolphin for the great service."
+  },
+  "gallery": {
+    "title": "Gallery",
+    "subtitle": "A look at our store and products"
+  },
+  "newsletter": {
+    "title": "Join Our Newsletter",
+    "subtitle": "Get the latest offers and new products first",
+    "placeholder": "Your email address",
+    "button": "Subscribe",
+    "success": "You're subscribed! Thanks for joining us.",
+    "error": "Something went wrong, please try again.",
+    "alreadySubscribed": "This email is already subscribed."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Have a question? Our team is here to help",
+    "formTitle": "Send Us a Message",
+    "nameLabel": "Full Name",
+    "namePlaceholder": "Enter your full name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "example@email.com",
+    "phoneLabel": "Phone Number",
+    "phonePlaceholder": "01XXXXXXXXX",
+    "subjectLabel": "Subject",
+    "subjectPlaceholder": "What is your message about?",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Write your message here...",
+    "submit": "Send Message",
+    "submitting": "Sending...",
+    "success": "Your message was sent successfully! We'll get back to you soon.",
+    "error": "Something went wrong while sending, please try again.",
+    "infoTitle": "Contact Information",
+    "address": "Address",
+    "addressValue": "Cairo, Egypt",
+    "phone": "Phone",
+    "email": "Email",
+    "hours": "Working Hours",
+    "hoursValue": "Daily, 10 AM - 11 PM",
+    "mapTitle": "Find Us on the Map",
+    "validation": {
+      "nameRequired": "Name is required",
+      "emailInvalid": "Invalid email address",
+      "phoneInvalid": "Invalid phone number",
+      "messageRequired": "Message is required",
+      "messageMin": "Message is too short, at least 10 characters"
+    }
+  },
+  "footer": {
+    "about": "Dolphin is your one-stop shop for pet supplies in Egypt — food, accessories, and grooming products with trusted quality and competitive prices.",
+    "quickLinks": "Quick Links",
+    "categories": "Categories",
+    "contactInfo": "Contact Info",
+    "followUs": "Follow Us",
+    "newsletterTitle": "Subscribe to our newsletter",
+    "newsletterDesc": "Latest offers and products in your inbox",
+    "rights": "© {year} Dolphin Pet Supplies. All rights reserved.",
+    "madeWith": "Made with love for all our four-legged friends"
+  },
+  "whatsapp": {
+    "label": "Chat with us on WhatsApp",
+    "defaultMessage": "Hi! I'd like to ask about your products at Dolphin"
+  },
+  "themeToggle": {
+    "light": "Light mode",
+    "dark": "Dark mode"
+  },
+  "languageToggle": {
+    "label": "Change language"
+  },
+  "notFound": {
+    "title": "404",
+    "heading": "Looks like this page ran off!",
+    "subtitle": "The page you're looking for doesn't exist or has been moved.",
+    "cta": "Back to Home"
+  },
+  "common": {
+    "skipToContent": "Skip to content",
+    "loading": "Loading..."
+  }
+}

@@ -33,9 +33,9 @@ export async function PATCH(request: NextRequest) {
     return NextResponse.json({ success: false, error: 'invalid_input' }, { status: 400 });
   }
 
-  const { error } = await supabaseAdmin
+  const { error } = await (supabaseAdmin as any)
     .from('contact_messages')
-    .update({ is_read } as any)
+    .update({ is_read })
     .eq('id', id);
 
   if (error) {

@@ -1,85 +1,44 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { verifyAdminSession } from '@/lib/auth';
-import { supabaseAdmin } from '@/lib/supabase/admin';
+import { supabase } from '@/lib/supabase/client';
 
-export async function GET() {
-  const authorized = await verifyAdminSession();
-  if (!authorized) {
-    return NextResponse.json({ success: false, error: 'unauthorized' }, { status: 401 });
+/**
+ * GET /api/products
+ * Query params:
+ *  - category: filter by product category
+ *  - featured: 'true' to return only featured products
+ *  - search: case-insensitive search on name (ar/en)
+ */
+export async function GET(request: NextRequest) {
+  try {
+    const searchParams = request.nextUrl.searchParams;
+    const category = searchParams.get('category');
+    const featured = searchParams.get('featured');
+    const search = searchParams.get('search');
+
+    let query = supabase.from('products').select('*').order('created_at', { ascending: false });
+
+    if (category && category !== 'all') {
+      query = query.eq('category', category);
+    }
+
+    if (featured === 'true') {
+      query = query.eq('is_featured', true);
+    }
+
+    if (search) {
+      query = query.or(`name_ar.ilike.%${search}%,name_en.ilike.%${search}%`);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      console.error('Supabase query error:', error);
+      return NextResponse.json({ success: false, error: 'database_error' }, { status: 500 });
+    }
+
+    return NextResponse.json({ success: true, data });
+  } catch (error) {
+    console.error('Products API error:', error);
+    return NextResponse.json({ success: false, error: 'server_error' }, { status: 500 });
   }
-
-  const { data, error } = await supabaseAdmin
-    .from('products')
-    .select('*')
-    .order('created_at', { ascending: false });
-
-  if (error) {
-    return NextResponse.json({ success: false, error: 'database_error' }, { status: 500 });
-  }
-
-  return NextResponse.json({ success: true, data });
-}
-
-export async function POST(request: NextRequest) {
-  const authorized = await verifyAdminSession();
-  if (!authorized) {
-    return NextResponse.json({ success: false, error: 'unauthorized' }, { status: 401 });
-  }
-
-  const body = await request.json();
-
-  const { error } = await supabaseAdmin.from('products').insert(body);
-
-  if (error) {
-    return NextResponse.json({ success: false, error: 'database_error' }, { status: 500 });
-  }
-
-  return NextResponse.json({ success: true });
-}
-
-export async function PATCH(request: NextRequest) {
-  const authorized = await verifyAdminSession();
-  if (!authorized) {
-    return NextResponse.json({ success: false, error: 'unauthorized' }, { status: 401 });
-  }
-
-  const body = await request.json();
-  const { id, ...updates } = body;
-
-  if (!id) {
-    return NextResponse.json({ success: false, error: 'invalid_input' }, { status: 400 });
-  }
-
-  const { error } = await supabaseAdmin
-    .from('products')
-    .update({ ...updates, updated_at: new Date().toISOString() })
-    .eq('id', id);
-
-  if (error) {
-    return NextResponse.json({ success: false, error: 'database_error' }, { status: 500 });
-  }
-
-  return NextResponse.json({ success: true });
-}
-
-export async function DELETE(request: NextRequest) {
-  const authorized = await verifyAdminSession();
-  if (!authorized) {
-    return NextResponse.json({ success: false, error: 'unauthorized' }, { status: 401 });
-  }
-
-  const { searchParams } = new URL(request.url);
-  const id = searchParams.get('id');
-
-  if (!id) {
-    return NextResponse.json({ success: false, error: 'invalid_input' }, { status: 400 });
-  }
-
-  const { error } = await supabaseAdmin.from('products').delete().eq('id', id);
-
-  if (error) {
-    return NextResponse.json({ success: false, error: 'database_error' }, { status: 500 });
-  }
-
-  return NextResponse.json({ success: true });
 }

@@ -35,7 +35,7 @@ export async function POST(request: NextRequest) {
 
     if (existing) {
       if (!existing.is_active) {
-        await supabaseAdmin
+        await (supabaseAdmin as any)
           .from('newsletter_subscribers')
           .update({ is_active: true })
           .eq('id', existing.id);
